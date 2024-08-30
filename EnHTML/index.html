@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Interés Compuesto</title>
+    <script>
+        // Función para calcular el  interés 
+        function calcularValorFuturo() {
+            
+            let capital = parseFloat(prompt("Ingrese la capital: "));
+            let tasaInteres = parseFloat(prompt("Ingrese la tasa de interés anual en porcentaje: ")) / 100;
+            let años = parseInt(prompt("Ingrese el número de años: "));
+            // Calcula el valor  utilizando la fórmula del interés 
+            let valorFuturo = capital * Math.pow((1 + tasaInteres), años);
+            // Muestra el valor del interes  capital en una ventana emergente
+            alert("El valor futuro del capital es: " + valorFuturo.toFixed(2));
+        }
+    </script>
+</head>
+<body>
+    <h1>Interes</h1>
+    <button onclick="calcularValorFuturo()">Calcular Valor Futuro</button>
+</body>
+</html>
